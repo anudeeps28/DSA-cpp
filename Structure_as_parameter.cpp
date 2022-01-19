@@ -25,7 +25,7 @@ int main2(){
 }
 
 int area (struct Rectangle r1) { //seperate object created; call by value
-    r1.length++; //will not change the actual parameter
+    r1.length++; //call by value will not change the actual parameter
     return r1.length*r1.breadth;
 }
 
