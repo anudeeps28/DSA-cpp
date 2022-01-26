@@ -45,7 +45,7 @@ int mainn(){
 
 
 //call by reference - allowed only by c++, not C
-void swappp(int &x, int &y){  //in memory, swap is inside the main function
+void swappp(int &x, int &y){  //in memory, swap is inside the main function.
     int temp;
     temp = x;
     x = y;
