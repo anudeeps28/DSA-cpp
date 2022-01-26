@@ -40,7 +40,7 @@ int main (){
 
 //}
 
-//array can only be sent by call by address, but this structure is having an array, so you can pass it..
+//array can only be sent by call by address, but this structure is having an array, so you can pass it.
 void fun(Struct test t1){ //call by value, so t values copied in t1
     t1.A[0] = 10; //changing first value of t1 to 10 instead of 1
     t1.A[1] = 0; 
