@@ -1,4 +1,7 @@
-class Arithmatic{
+#include<iostream>
+using namespace std;
+
+class Arithmatic{ 
 private:
     int a; //these are class members
     int b;
