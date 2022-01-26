@@ -3,6 +3,8 @@
 
 using namespace std;
 
+ //noob programming v/s professional programming
+
 //monolithic
 int main(){
     int length = 0; //we are assigning values inspite of asking them ahead in the function because it is a good practice to assign values right away
