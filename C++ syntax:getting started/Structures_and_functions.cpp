@@ -1,5 +1,5 @@
 //write structures seperately
-//main function is only used for calling other functions
+//main function is only used for calling other functions.
 
 
 #include<iostream>
