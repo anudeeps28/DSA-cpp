@@ -40,4 +40,4 @@ int main(){
 }
 
 //object = writing data and all the objects together, we can define a class and create an object
-//withoug writing class, you cannot say it is an object oriented program
+//withoug writing class, you cannot say it is an object oriented program.
