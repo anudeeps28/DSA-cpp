@@ -4,7 +4,7 @@
 
 using namespace std;
 
-struct Rectangle //defined outside the main function ; definition does not consume the main memory
+struct Rectangle //defined outside the main function ; definition does not consume the main memory.
 {
     int length;
     int breadth;

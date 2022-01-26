@@ -3,7 +3,7 @@
 #include<stdlib.h>
 
 using namespace std;
-//because all the functions are working on a structure, include them all inside the structure
+//because all the functions are working on a structure, include them all inside the structure. 
 class Rectangle //class means all these members you have defined are private, this is the only difference, rest class is the same as structure
 {public:
     int length;

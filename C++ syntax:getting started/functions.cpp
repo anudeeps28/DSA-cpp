@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int add(int a, int b) { //this is the header/prototype; int a and int b are formal parameters
+int add(int a, int b) { //this is the header/prototype; int a and int b are formal parameters. 
     int c; //all that is inside the header is called the definition of function
     c = a+b;
     return c;
