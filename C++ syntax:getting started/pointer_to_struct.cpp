@@ -11,7 +11,7 @@ struct Rectangle {
 };
 
 int main() {
-    Rectangle r = {10,5}; //struct is not mandatory in C++
+    Rectangle r = {10,5}; //struct is not mandatory in C++ //
     cout<<r.length<<endl;
     cout<<r.breadth<<endl;
 
