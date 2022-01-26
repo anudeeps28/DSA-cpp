@@ -1,0 +1,9 @@
+//compiling
+compiler command = g++ -std=c++ name_of_program
+
+//debugging
+debugging = tracing the program line by line and tracing the program;
+traacing helps us to find out any bugs in the program
+
+just start the debugger and it will run line by line for you to watch
+
