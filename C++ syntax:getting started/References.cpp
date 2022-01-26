@@ -7,7 +7,7 @@ using namespace std;
 int main() {
 
     int a = 10;
-    int &r = a; //& used to give reference, * used for pointer
+    int &r = a; //& used to give reference, * used for pointer.
     //this means that a has been given an additional name r. We can either call it with a or r.
 
 cout << a << endl;
