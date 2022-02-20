@@ -9,3 +9,4 @@ else if (temperature >= 60) { // 60 <= temperature < 70
 else { // temperature < 60
   // Safe! Continue usual tasks.
 }
+

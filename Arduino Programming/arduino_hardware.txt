@@ -1,0 +1,49 @@
+# Arduino basics
+
+Arduino: microcontroller
+    a mini computer that we can program to do all sorts of things
+    we can do projects of home automation to vodka vending machines
+    a load of add on modules and all sensors and GPS modules: all this is fun stuff
+
+Arduino is not used in comercial microcontrollers:
+    great for rapid prototyping and hobby electronics
+
+Hardware:
+    digital pins: a set of pins that can be turned either ON or OFF using code
+    some digital pins can be used for analog signals ( the ones with ~PWM squiggle)
+
+    Digital pins are 0V when turned OFF, and are 5V when turned ON
+    Can only source or sink 20mA
+
+Digital Writing: Turning digital pins on or off
+Digital Reading: Using the digital pins to test whether an input voltage is "HIGH" (close
+to 5 V), or "LOW" (close to 0 V)
+
+Analog IN pins  
+    A0 - A5
+    used for reading analog values (anything that is not ON or OFF)
+    A microphone would give an analog signals which will be read by analog pins
+
+Power pins      
+    GND - Ground
+    3.3V and 5V
+    These are used to power external boards that are connected to the Arduino
+        Like breadboard 
+    
+Arduino will contain a microcontroller chip which will be responsible for doing everything that arduino is doing    
+    this is the brain of the arduino
+
+there is reset button  
+
+Power plugs
+    takes 9-12V DC, 
+    you can also use a battery supply
+
+A USV B-type port 
+    how you upload code to your arduino 
+
+    
+
+
+
+

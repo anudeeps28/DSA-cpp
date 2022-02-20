@@ -1,0 +1,5 @@
+/*
+converting binary to decimal and vice versa
+*/
+
+ Notes posted in Roam Research Digital Garden: 
