@@ -6,9 +6,10 @@
     string s;
     cout << "Enter a string";
 
-    getline(cin,s);
+    getline(cin,s); // getline is a built - in c++ function to store an input string in a variable
+    // use cin.getline() if you are trying to get numbers
+    
     cout << "You have entered: ";
-
     cout << s <<endl;
     
     // push_back inserts element to the last of the vector
