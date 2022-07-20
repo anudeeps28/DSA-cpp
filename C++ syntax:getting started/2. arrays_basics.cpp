@@ -15,30 +15,47 @@ int main() {
   cout << sizeof(A) << endl; //each integer takes 4 bytes
   cout << A[1]<<endl; //endl = end line (moves the cursor to the next line)
   printf("%d\n",A[2]); //can also use printf just like C, cout of for c++
+  cout << "---\n";
 
-  cout << sizeof(B) << endl;
+  // -----------------------------------------------------------------
+
+  cout << sizeof(B) << endl; // sizeof gives the size in the memory
   cout << B[1]<<endl;
   printf("%d\n",B[2]);
+  cout << "---\n";
+
+  // -----------------------------------------------------------------
 
   int C[10] = {1,2,3,4,5,6,7};
   cout << sizeof(C) << endl;
   cout << C[8]<<endl; //rest of the values of the array is 0
   printf("%d\n",C[9]);
+  cout << "---\n";
+
+  // -----------------------------------------------------------------
 
   int D[10] = {0}; //initializing an array of all elements 0
   for (int i=0; i<10; i++) { //displayiing all values of an array
     cout << D[i] << endl;
   }
+  cout << "---\n";
 
-  int n;
-  cout << "Enter array size";
-  cin >> n;
-  int E[n];
-  E[0] = 2;
+  // -----------------------------------------------------------------
+
+  int n; // initializing n
+  cout << "Enter array size"; 
+  cin >> n; // taking input 
+  int E[n]; // Variable sized array = can create; cannot initialize initializing array of size n
+  
+  // thus it will have all garbage values
+  
+  //giving values to elements of the array
+  E[0] = 2; // first element of array = 0
 
   for (int x:E){
     cout << x << endl;
   }
+  
   //apart from 2 (first value), all will be garbage values
 
   return 0;

@@ -5,7 +5,13 @@
 using namespace std;
 //because all the functions are working on a structure, include them all inside the structure. 
 class Rectangle //class means all these members you have defined are private, this is the only difference, rest class is the same as structure
-{public:
+
+/* A structure and class are same in C++, only difference being: 
+everything in public in structure, while in a class, everything is by default private*/
+
+/* Writing a class = C++ style of programming; Writing functions = C - style of programming */
+{
+public:
     int length;
     int breadth;
 
@@ -22,9 +28,7 @@ int area ()
     
 };
 
-void changelength(int l){
-    length = l;
-}
+
 };
 int main(){
     Rectangle r; //also direct initialization we cannot do in class
@@ -35,7 +39,6 @@ int main(){
 
     r.initialize(l, b);
     int a = r.area();
-    //int le = r.changelength();
     
 }
 

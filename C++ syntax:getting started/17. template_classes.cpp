@@ -1,25 +1,27 @@
 #include<iostream>
 using namespace std;
 
-class Arithmatic{ 
+template <class T>
+class Arithmatic
+{ 
 private:
-    int a; //these are class members
-    int b;
+   T int a; //these are class members
+   T int b;
 public:
-    Arithmatic(int a, int b); //these are parameters
+    Arithmatic(T int a, T int b); //these are parameters
     int add();
     int sub();
 };
-
-Arithmatic ::Arithmatic(int a, int b){
-    this ->a = a;
-    this ->b = b;
+template <class T>
+Arithmatic <T> ::Arithmatic(T a, T b){ // constructor
+    this->a = a;
+    this->b = b;
 
 }
-
+ template class<T>
 int Arithmatic :: add(){
-    int c;
-    c = a+b;
+    T int c;
+     c = a+b;
     return c;
 
 }
@@ -30,11 +32,14 @@ int Arithmatic :: sub(){
     return c;
 }
 
-////////////////////////////////////////////////////////////////////
-//changing existing class into generic class
+//---------------------------------------------------------------------------
 
+// using the same class for different data types = templates = generic class
+
+//changing existing class into generic class
 template<class T>
-class Arithmatic{
+class Arithmatic
+{
 private:
     T a; //these are class members
     T b;
