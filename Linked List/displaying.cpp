@@ -14,7 +14,7 @@ void create(int A[], int n)
     int i;
     struct  Node *t, *last;
     first = new Node;
-    first -> data = A[0];
+    first -> data = A[0]; // we access data and next of a linked list node usin "->"
     first -> next = NULL;
     last = first;
 
