@@ -9,7 +9,10 @@ struct Queue
     int *Q;
 };
 
-
+int isEmpty(struct Queue q)
+{
+    return q.front == q.rear;
+}
 int main()
 {
 
