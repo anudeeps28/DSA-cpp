@@ -9,6 +9,12 @@ struct Queue
     int *Q;
 };
 
+void create(struct Queue *q, int size)
+{
+    q->size = size;
+    q->front = q->rear = 0;
+    q->Q = new int;
+}
 int isEmpty(struct Queue q)
 {
     return q.front == q.rear;
