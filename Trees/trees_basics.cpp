@@ -9,6 +9,7 @@ struct Queue
     int *Q;
 };
 
+// function to create a queue (to be used for Tree)
 void create(struct Queue *q, int size)
 {
     q->size = size;
