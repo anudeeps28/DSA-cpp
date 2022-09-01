@@ -10,7 +10,7 @@ struct Queue
     int *Q; // space for storing elements (dynamically creating memory in heap)
 };
 
-// creating queue
+// creating queue using an array
 void Create(struct Queue *q, int size)
 {
     q->size = size;
