@@ -1,9 +1,14 @@
+// this is the header file for tree_basics_in_c.c
+
+// creating the node for each node of tree
 struct Node
 {
  struct Node *lchild;
  int data;
  struct Node *rchild;
 };
+
+// defining queue in which we will store addresses of tree nodes
 struct Queue
 {
  int size;
@@ -11,6 +16,8 @@ struct Queue
  int rear;
  struct Node **Q;
 };
+
+// creating the queue function
 void create(struct Queue *q,int size)
 {
  q->size=size;
@@ -18,6 +25,8 @@ void create(struct Queue *q,int size)
  q->Q=(struct Node **)malloc(q->size*sizeof(struct
 Node *));
 }
+
+// function to add elements in the queue
 void enqueue(struct Queue *q,struct Node *x)
 {
  if((q->rear+1)%q->size==q->front)
@@ -28,6 +37,8 @@ void enqueue(struct Queue *q,struct Node *x)
  q->Q[q->rear]=x;
  }
 }
+
+// function to remove elements from the queue
 struct Node * dequeue(struct Queue *q)
 {
  struct Node* x=NULL;
@@ -41,6 +52,8 @@ struct Node * dequeue(struct Queue *q)
  }
  return x;
 }
+
+// function to check if a queue is empty or not
 int isEmpty(struct Queue q)
 {
  return q.front==q.rear;
