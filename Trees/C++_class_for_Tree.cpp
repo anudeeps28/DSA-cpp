@@ -18,7 +18,7 @@ public:
     void Inorder(){Inorder(root);}
     void Inorder(Node *p);
     void Levelorder(){Levelorder(root);}
-    void Levelorder(Node *p);
+    void Levelorder(Node *p);   
     int Height(){return Height(root);}
     int Height(Node *root);
 
