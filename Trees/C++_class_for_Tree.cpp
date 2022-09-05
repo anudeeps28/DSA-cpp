@@ -1,6 +1,8 @@
 #include <iostream>
 #include <stdio.h>
 #include "C++_header_file_for_Tree.h"
+#include "C++_Stack_header_file.hpp"
+#include "../Stack/stack_using_arrays.cpp"
 
 using namespace std;
 
@@ -21,10 +23,16 @@ public:
     void Levelorder(Node *p);   
     int Height(){return Height(root);}
     int Height(Node *root);
+    void iterativePreorder(Node* p);
+    void iterativePreorder() { iterativePreorder(root); }
+    void iterativeInorder(Node* p);
+    void iterativeInorder() { iterativeInorder(root); }
+    void iterativePostorder(Node* p);
+    void iterativePostorder() { iterativePostorder(root); }
 
 };  
 
-// creating the tree
+// creating the tree (using recursive functions)
 void Tree:: CreateTree()
 {
     Node *p,*t;
@@ -148,6 +156,66 @@ int Tree::Height(Node *root)
 }
 
 
+// ITERATIVE TRAVERSALS FOR TREES //
+
+// Iterative preorder
+void Tree::iterativePreorder(Node *p) {
+    Stack<Node*> stk;
+    while (p != nullptr || ! stk.empty()){
+        if (p != nullptr){
+            cout << p->data << ", " << flush;
+            stk.emplace(p);
+            p = p->lchild;
+        } else {
+            p = stk.top();
+            stk.pop();
+            p = p->rchild;
+        }
+    }
+    cout << endl;
+}
+ 
+// iterative inorder
+void Tree::iterativeInorder(Node *p) {
+    Stack<Node*> stk;
+    while (p != nullptr || ! stk.empty()){
+        if (p != nullptr){
+            stk.emplace(p);
+            p = p->lchild;
+        } else {
+            p = stk.top();
+            stk.pop();
+            cout << p->data << ", " << flush;
+            p = p->rchild;
+        }
+    }
+    cout << endl;
+}
+ 
+// iterative postorder
+void Tree::iterativePostorder(Node *p) {
+    Stack<long int> stk;
+    long int temp;
+    while (p != nullptr || ! stk.empty()){
+        if (p != nullptr){
+            stk.emplace((long int)p);
+            p = p->lchild;
+        } else {
+            temp = stk.top();
+            stk.pop();
+            if (temp > 0){
+                stk.emplace(-temp);
+                p = ((Node*)temp)->rchild;
+            } else {
+                cout << ((Node*)(-1 * temp))->data << ", " << flush;
+                p = nullptr;
+            }
+        }
+    }
+    cout << endl;
+}
+
+
 int main()
 {
     Tree t; // making an object of class tree
@@ -155,6 +223,15 @@ int main()
     t.CreateTree(); // calling function CreateTree 
     t.Preorder();
 
+    cout << "Iterative Preorder: " << flush;
+    t.iterativePreorder();
+ 
+    cout << "Iterative Inorder: " << flush;
+    t.iterativeInorder();
+ 
+    cout << "Iterative Postorder: " << flush;
+    t.iterativePostorder();
+ 
 
     return 0;
 }
