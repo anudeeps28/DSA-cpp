@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include "C++_header_file_for_Tree.h"
 #include "C++_Stack_header_file.hpp"
-#include "../Stack/stack_using_arrays.cpp"
+
 
 using namespace std;
 
@@ -160,7 +160,7 @@ int Tree::Height(Node *root)
 
 // Iterative preorder
 void Tree::iterativePreorder(Node *p) {
-    Stack<Node*> stk;
+    Stack<Node *> stk;
     while (p != nullptr || ! stk.empty()){
         if (p != nullptr){
             cout << p->data << ", " << flush;
@@ -231,7 +231,6 @@ int main()
  
     cout << "Iterative Postorder: " << flush;
     t.iterativePostorder();
- 
 
     return 0;
 }
