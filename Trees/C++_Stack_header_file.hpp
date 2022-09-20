@@ -27,6 +27,13 @@ Stack::Stack(int size) {
 Stack::~Stack() {
     delete[] S;
 }
+
+void Stackcreate (Stack *st ,int size)
+{
+    st->size = size;
+    st->top = -1;
+    st->S = new Node;
+}
  
 void Stack::push(int x) {
     if (isFull()){
