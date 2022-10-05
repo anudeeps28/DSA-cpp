@@ -4,40 +4,73 @@
 
 using namespace std;
 
-struct Vertex
-{
-    int a,b,c;
-};
+int main() {
 
-int main () {
-    vector<int> data;
+	vector<int>numbers;
+
+    // adding elements in the vector / add element at the back of the vector
+    numbers.push_back(0);
+
+	for (int i = 1; i <= 10; i++)
+		numbers.push_back(i);
+
     
-    for (int i = 0; i < 10; i++) {
-        data.push_back(i);
+    //1. print vector elements
+	for (int n : numbers) {
+		cout << n << endl;
     }
 
-    for (int i = 0; i < 10; i++) {
-        cout << data[i] << endl;
-    }
+    cout << "////////////" << endl;
+
+	//2. print vector elements with iterators
+	for (auto it = numbers.begin(); it != numbers.end(); it++) { // begin and end gives an iterator pointer
+		//cout << it << endl; -> this will give error
+		cout << *it << endl;
+		cout << &it << endl;
+		cout << &(*it) << endl;
+	}
+
+    cout << "////////////" << endl;
+
+    auto it = numbers.begin();
+	cout << "Element at index 5 is: " << *(it + 5) << endl;
+
+    cout << "////////////" << endl;
+
+    // important functionalities of std::vector
+
+	cout << "Size: " << numbers.size() << endl;
+	cout << "Max size: " << numbers.max_size() << endl;
+	cout << "Capacity: " << numbers.capacity() << endl;
+	numbers.resize(5);
+	cout << "Size after resizing: " << numbers.size() << endl;
+	
+    if (numbers.empty())
+		cout << "Vector is empty" << endl;
+	else
+		cout << "Vector is not empty" << endl;
+	
+    cout << "Element[0] is: " << numbers[0] << endl;
+	cout << "Element at(0) is: " << numbers.at(0) << endl;
+	cout << "Front: " << numbers.front() << endl;
+	cout << "Back: " << numbers.back() << endl;
     
-    // ----------------------------- // 
-    
-    vector<Vertex> vertices;
 
-    vertices.push_back({1,2,3});
-    vertices.push_back({4,5,6});
+    cout << "////////////" << endl;
 
-    for (int i = 0; i < 2; i++) {
-        for (int j = 0; j < 3; j++) {
-            cout << vertices[i][j] << endl;
-        }
+    // insert element at specific position in vector
+	numbers.insert(numbers.begin() + 2, 88);
+    for (int n : numbers) {
+		cout << n << endl;
     }
-
-    /*
-
-    invalid operands to binary expression ('std::ostream' (aka 'basic_ostream<char>') and 'std::__vector_base<Vertex, std::allocator<Vertex>>::value_type' (aka 'Vertex'))
-        cout << vertices[i] << endl;
-        ~~~~ ^  ~~~~~~~~~~~
-        
-    */
+	// erase element from a specific position
+	numbers.erase(numbers.begin() + 2);
+    for (int n : numbers) {
+            cout << n << endl;
+    }
+	// remove last element of vector
+	numbers.pop_back();
+    for (int n : numbers) {
+            cout << n << endl;
+    }
 }
