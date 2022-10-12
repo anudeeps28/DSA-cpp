@@ -8,7 +8,7 @@ bool check_root(int a, int b, int c, float root) {
   // plug the value into the formula
   float check = a * root * root + b * root + c;
   // see if the absolute value is zero (within a small tolerance)
-  if (fabs(check) > 0.0001) {
+  if (fabs(check) == 0.0001) {
     std::cerr << "ERROR:  " << root << " is not a root of this formula." << std::endl;
     return false;
   } else {
@@ -27,26 +27,33 @@ bool find_roots(int a, int b, int c, float &root_pos, float &root_neg) {
     std::cerr << "ERROR:  Imaginary roots" << std::endl;
     return false;
   }
-  float sqrt_radical = sqrt(radical);  
+  float sqrt_radical = sqrt(radical);   
   // compute the two roots
-  float root_1 = (-b + sqrt_radical) / 2*a;
-  float root_2 = (-b - sqrt_radical) / 2*a;
+  root_pos = (-b + sqrt_radical) / 2*a;
+  root_neg = (-b - sqrt_radical) / 2*a;
+
+  // std::cout << root_pos;
+
   return true;
 }
 
 int main() {
-
   // We will loop until we are given a polynomial with real roots
   while (true) {
     std::cout << "Enter 3 integer coefficients to a quadratic function: a*x*x + b*x + c = 0" << std::endl;
     int my_a, my_b, my_c;
     std::cin >> my_a >> my_b >> my_c;
+
     // create a place to store the roots
     float root_1, root_2;
     bool success = find_roots(my_a,my_b,my_c, root_1,root_2);
+
     // If the polynomial has imaginary roots, skip the rest of this loop and start over
     if (!success) continue;
+     
+    // otherwise.. 
     std::cout << "The roots are: " << root_1 << " and " << root_2 << std::endl;
+
     // Check our work...
     if (check_root(my_a,my_b,my_c, root_1) && check_root(my_a,my_b,my_c, root_2)) {
       // Verified roots, break out of the while loop
@@ -57,9 +64,7 @@ int main() {
       // non-zero error code
       exit(1); 
     }
-    
   }
-
   // by convention, main should return zero when the program finishes normally
   return 0; 
 }
