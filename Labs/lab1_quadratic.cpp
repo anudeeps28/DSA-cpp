@@ -37,7 +37,6 @@ bool find_roots(int a, int b, int c, float &root_pos, float &root_neg) {
   return true;
 }
 
-
 int main() {
   // We will loop until we are given a polynomial with real roots
   while (true) {
