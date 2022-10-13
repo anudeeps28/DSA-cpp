@@ -19,7 +19,7 @@ bool check_root(int a, int b, int c, float root) {
 /* Use the quadratic formula to find the two real roots of polynomial.   Returns 
 true if the roots are real, returns false if the roots are imaginary.  If the roots 
 are real, they are returned through the reference parameters root_pos and root_neg. */ 
-bool find_roots(int a, int b, int c, float &root_pos, float &root_neg) {
+bool find_roots(int a, int b, int c, float &root_pos, float &root_neg) { // roor_pos and root_neg are created in this, and passed by reference in line 50.
   // compute the quantity under the radical of the quadratic formula
   int radical = b*b - 4*a*c;
   // if the radical is negative, the roots are imaginary

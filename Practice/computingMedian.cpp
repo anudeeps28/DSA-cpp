@@ -47,7 +47,7 @@ double compute_median(const std::vector<int> & scores) {
 int main(int argc, char* argv[]) { // int argc, char* argv[] is given with the main function to take input from terminal while running
     
     if (argc != 2) {
-        std::cerr << "Usage: " << argv[0] << " grades-file\n";
+        std::cerr << "Usage: " << argv[0] << " grades-file\n"; // cerr is used to print an error message; this is similar to 'cout; but for error messsages
         return 1;
     }
 
