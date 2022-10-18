@@ -39,12 +39,12 @@ void print(const std::vector<Line> roads) {
   }
 
   // count the number of roads with gradient less than 10%
-  int count;
-  for (unsigned int i = roads.size() - 1;
-        gradient(roads[i]) < 10.0;
-       i--) {
-    count++;
+  int count = 0;
+  for (unsigned int i = 0; i < roads.size(); i++) {
+    if (gradient(roads[i]) < 10)
+      count++;  
   }
+
   std::cout << "There are " << count << " road(s) with gradient less than 10%." << std::endl;
 }
 
@@ -57,6 +57,7 @@ int main (int argc, char* argv[]) {
     std::cerr << "ERROR: Usage: " << argv[0] << " <input_file>" << std::endl;
     return 1;
   }
+
   std::ifstream istr(argv[1]);
   if (!istr.good()) {
     std::cerr << "ERROR: the file " << argv[1] << " was not successfully opened for reading." << std::endl;
