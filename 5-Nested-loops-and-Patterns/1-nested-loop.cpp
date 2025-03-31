@@ -2,7 +2,7 @@
 using namespace std;
 /**
  * 1 - outer loop: number of rows
- * 2 -  inner loop: number of columns (how many items are in each row)
+ * 2 -  inner loop: number of columns (how many times/what is being printed in "each row")
  * 3 - code inside inner loop: what will each row be
  */
 int main() {
