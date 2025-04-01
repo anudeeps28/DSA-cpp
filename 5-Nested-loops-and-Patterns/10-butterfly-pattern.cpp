@@ -2,7 +2,7 @@
 using namespace std;
 
 int main () {
-    int n=4;
+    int n=10;
     // upper half
     for(int i=1; i<=n; i++) {
         // starts
