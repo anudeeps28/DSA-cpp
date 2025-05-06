@@ -16,16 +16,16 @@ void spiralMatrix(int matrix[][4], int n, int m) {
         }
         // bottom
         for (int j = endingCol - 1; j >= startingCol; j--) {
-            if(startingRow == endingRow) {
-                // edge case for odd number of dimension
+            // edge case for odd number of dimension
+            if(startingRow == endingRow) { 
                 break; // because this is already printed in "top" operation
             }
             cout << matrix[endingRow][j] << " ";
         }
         // left
         for (int i = endingRow - 1; i >= startingRow + 1; i--) {
+            // edge case for odd number of dimension
             if(startingCol == endingCol) {
-                // edge case for odd number of dimension
                 break; // because this is already printed in "right" operation
             }
             cout << matrix[i][startingCol] << " ";
