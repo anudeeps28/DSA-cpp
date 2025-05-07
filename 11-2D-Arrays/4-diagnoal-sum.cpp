@@ -8,7 +8,7 @@ void diagonalSumOptimized(int mat[][4], int n) {
         sum += mat[i][i]; // primary diagonal sum
         if (i != n-i-1) { // check for common element
             sum += mat[i][n-i-1]; // secondary diagnoal sum
-        }
+        } else {;}
     }
     cout << sum << endl;
 }
@@ -22,7 +22,7 @@ void diagonalSum(int mat[][4], int n) {
                 sum += mat[i][j];
             } else if (j == n-i-1) {
                 sum += mat[i][j];
-            }
+            } else{;}
         }
     }
     cout << sum << endl;

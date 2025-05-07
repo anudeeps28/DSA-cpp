@@ -36,6 +36,7 @@ int binarySearch(int arr[], int size, int key) {
     return -1;
 }
 
+// O(n * log m)
 bool binarySearchInMatix(int mat[][4], int n, int m, int key) {
     for(int i=0; i<n; i++) {
         int col = binarySearch(mat[i], m, key);
