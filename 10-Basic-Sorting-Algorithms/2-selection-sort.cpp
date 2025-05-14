@@ -12,7 +12,7 @@ void printArray(int arr[], int n) {
 void selectionSort(int arr[], int n) {
     for(int i=0; i<n-1; i++) {
         int minIdx = i;
-        // loop to find min
+        // loop to find min idx
         for(int j=i+1; j<n; j++) {
             if(arr[j] < arr[minIdx]) {
                 minIdx = j;
