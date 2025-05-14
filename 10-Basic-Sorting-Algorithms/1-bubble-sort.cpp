@@ -22,7 +22,7 @@ void reverseBubbleSort(int arr[], int n) {
 void bubbleSort(int arr[], int n) {
     bool isSwap = false;
     for(int i=0; i<n-1; i++) {
-        for(int j=0; j<n-i-1; j++) {
+        for(int j=0; j<n-i-1; j++) { // we go till (n-i-1) because we don't want to repeat the loop for elements which are already in their position
             if(arr[j] > arr[j+1]) {
                 swap(arr[j], arr[j+1]);
                 isSwap = true;
