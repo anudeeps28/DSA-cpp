@@ -22,13 +22,14 @@ void reverseBubbleSort(int arr[], int n) {
 
 void reverseSelectionSort(int arr[], int n) {
     for(int i=0; i<n; i++) {
-        int minIdx = i;
+        int maxIdx = i; 
+        // loop to find max idx
         for(int j=i+1; j<n; j++) {
-            if(arr[j] > arr[minIdx]) {
-                minIdx = j;
+            if(arr[j] > arr[maxIdx]) {
+                maxIdx = j;
             }
         }
-        swap(arr[i], arr[minIdx]);
+        swap(arr[i], arr[maxIdx]);
     }
 }
 
