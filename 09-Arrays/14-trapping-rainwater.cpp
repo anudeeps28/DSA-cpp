@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/**
+ * @brief LeetCode Question:
+ * https://leetcode.com/problems/trapping-rain-water/ 
+ */
+
 void trap(int* heights, int n) {
     int leftMax[2000];
     int rightMax[2000];

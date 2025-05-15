@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/**
+ * @brief LeetCode Question:
+ * https://leetcode.com/problems/best-time-to-buy-and-sell-stock/
+ */
+
 // O(n+n) = O(2n) = O(n)
 void maxProfit(int *prices, int n) {
     int bestBuy[10000];

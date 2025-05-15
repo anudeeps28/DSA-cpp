@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/**
+ * @brief LeetCode Question:
+ * https://leetcode.com/problems/contains-duplicate/description/
+ */
+
 // brute force solution (using arrays)
 class Solution {
    public:
