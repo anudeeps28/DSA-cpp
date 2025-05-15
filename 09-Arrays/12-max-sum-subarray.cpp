@@ -1,6 +1,11 @@
 #include<iostream>
 using namespace std;
 
+/**
+ * @brief LeetCode Question: 
+ * https://leetcode.com/problems/maximum-subarray/description/
+ */
+
 // kadane's algorithm (O(n))
 void maxSumSubarray3(int *array, int n) {
     int maxSum = INT_MIN;
