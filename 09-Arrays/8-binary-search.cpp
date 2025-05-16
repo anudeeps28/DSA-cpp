@@ -1,11 +1,12 @@
 #include<iostream>
 using namespace std;
 
+// O(log n)
 int binarySearch(int arr[], int size, int key) {
     int start = 0;
     int end = size-1;
     while(start <= end) {
-        int mid = (start + end)/2;
+        int mid = start + (end-start)/2; // for big values to prevent overflow, we cannot (start+end)/2
         if(arr[mid] == key) {
             return mid;
         } else if (arr[mid] < key) {
