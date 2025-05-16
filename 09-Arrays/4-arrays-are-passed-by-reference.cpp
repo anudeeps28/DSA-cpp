@@ -29,7 +29,7 @@ int main() {
     cout << *(arr+2) << endl; // arr[2]
 
     func(arr);  // arrays are always called by reference
-    cout << arr[0] << endl;
+    cout << arr[0] << endl; // 1000 because the changes are made in the original array (because arrays are passed by reference by default)
 
     func2(arr); // passing array name is equivallent to passing the pointer
     cout << arr[0] << endl;
